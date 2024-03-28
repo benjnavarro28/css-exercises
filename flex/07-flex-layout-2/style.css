@@ -1,13 +1,11 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .header {
-  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -20,10 +18,10 @@ body {
   padding-left: 16px;
   font-size: 32px;
   font-weight: 900;
+  flex: none;
 }
 
 .footer {
-  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
@@ -36,11 +34,13 @@ body {
 }
 
 .sidebar {
+  display: flex;
   width: 300px;
   flex-shrink: 0;
   background: royalblue;
   box-sizing: border-box;
-  padding: 100px;
+  padding: 16px;
+  height: 100vh;
 }
 
 .card {
@@ -49,24 +49,33 @@ body {
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
+  padding: 16px;
+  height: auto;
+  width: auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
   padding: 32px;
-  width: 100%;
-  height: 100%;
+  gap: 32px;
 }
 
 .main {
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
 }
 
 .sidebar a {
   color: white;
-  size: 24px;
+  font-size: 24px;
   text-decoration: none;
+  margin-bottom: 16px;
 }
 
 .sidebar ul {
   list-style-type: none;
+  padding: 0px;
+  margin: 0px;
 }
